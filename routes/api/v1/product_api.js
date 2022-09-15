@@ -4,5 +4,6 @@ const productsController = require('../../../controllers/api/v1/product_api');
 
 router.post('/create', productsController.create);
 router.get('/', productsController.displayProducts);
+router.delete('/:id', productsController.delete);
 
 module.exports = router;

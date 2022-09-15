@@ -1,4 +1,5 @@
 const Product = require('../../../models/product');
+const mongoose = require('mongoose');
 
 module.exports.create = async function(req, res){
     try{
@@ -63,6 +64,35 @@ module.exports.displayProducts = async function(req, res){
             data: {
                 products
             }
+        });
+    }catch(err){
+        console.log('Error :');
+        console.log('*:', err);
+        return res.status(500).json({
+            message: 'Internal Server Error'
+        });
+    }
+}
+
+
+module.exports.delete = async function(req, res){
+    try{
+        if(req.params.id.length != 24){ 
+            req.params.id = parseInt(req.params.id); 
+        }
+        let _id = mongoose.Types.ObjectId(req.params.id);
+        let product = await Product.findById(_id);
+
+        if(!product){
+            return res.status(200).json({
+                message: 'Invalid id !'
+            });
+        }
+
+        product.remove();
+
+        return res.status(200).json({
+            message: 'product deleted'
         });
     }catch(err){
         console.log('Error :');
