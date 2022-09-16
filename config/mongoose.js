@@ -1,8 +1,9 @@
 // mongodb configuration file setup with mongoose 
 
 const mongoose = require('mongoose');
+const env = require('./environment');
 
-const mongodb_url = `mongodb://localhost/e_commerce_api_development`;
+const mongodb_url = env.mongodb_url;
 
 mongoose.connect(mongodb_url, {
     family: 4,

@@ -1,5 +1,6 @@
 const Admin = require('../../../../models/admin');
 const jwt = require('jsonwebtoken');
+const env = require('../../../../config/environment');
 
 module.exports = async function(req, res){
     try{
@@ -20,7 +21,7 @@ module.exports = async function(req, res){
                 message: "Session created successfully !",
                 data: {
                     message: 'Here is your token, please keep it safe',
-                    token: jwt.sign(admin.toJSON(), 'changeBeforeProduction', {expiresIn: '10000000'})
+                    token: jwt.sign(admin.toJSON(), env.jwtSecret, {expiresIn: '10000000'})
                 }
             });
         }
