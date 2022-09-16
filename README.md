@@ -29,7 +29,7 @@ The following tools were used for development and testing :
 2. Download this project.
 3. Open the terminal and make this project the current working directory.
 ```
-$ cd ./Ecommere-API
+$ cd ./Ecommerce-API
 ```
 4. Install all the dependencies.
 ```
