@@ -1,6 +1,6 @@
 const Product = require('../../../../models/product');
 const mongoose = require('mongoose');
-
+// function to delete a product
 module.exports = async function(req, res){
     try{
         if(req.params.id.length != 24){ 

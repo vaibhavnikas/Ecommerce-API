@@ -1,3 +1,5 @@
+// moved all functions to product_controllers folder to make this file scalable
+
 module.exports.create = require('./product_controllers/create');
 
 module.exports.displayProducts = require('./product_controllers/displayProducts');

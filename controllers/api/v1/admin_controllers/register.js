@@ -1,5 +1,6 @@
 const Admin = require('../../../../models/admin');
 
+// function to register as an admin
 module.exports = async function(req, res){
     try{
 

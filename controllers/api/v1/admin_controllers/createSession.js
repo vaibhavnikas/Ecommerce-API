@@ -2,6 +2,7 @@ const Admin = require('../../../../models/admin');
 const jwt = require('jsonwebtoken');
 const env = require('../../../../config/environment');
 
+// function to generate secret token
 module.exports = async function(req, res){
     try{
         if(!(req.body.email && req.body.password)){

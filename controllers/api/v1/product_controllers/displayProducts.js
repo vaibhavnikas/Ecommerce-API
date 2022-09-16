@@ -1,5 +1,5 @@
 const Product = require('../../../../models/product');
-
+// function to display all the products
 module.exports = async function(req, res){
     try{
         let products = await Product.find();

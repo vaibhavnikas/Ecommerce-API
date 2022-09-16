@@ -1,5 +1,5 @@
 const Product = require('../../../../models/product');
-
+// function to create a product
 module.exports = async function(req, res){
     try{
         if(!(req.body.name && req.body.quantity)){
