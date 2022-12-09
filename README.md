@@ -2,7 +2,7 @@
 This is an API for an ecommerce platform admin to manage product inventory.
 
 # Deployment Link
-  https://ecommerce-api-version1.herokuapp.com/
+  https://ecommerce-api-kqvd.onrender.com
   
   You can use this link to test this API on Postman.
 
